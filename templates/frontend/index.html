@@ -1,31 +1,71 @@
 {% extends 'frontend/base.html' %}
-{% block title %} Home {% endblock %}
+{% block title %} WE ARE VOLUNTEER {% endblock %}
 {% block content %}
+<style>
+   img {
+       display: block;
+       margin: 0 auto;
+       padding-top: 20;
+       padding-bottom: 30;
+   }
+</style>
+
+<div class="text-center">
+    <h1>WE ARE VOLUNTEER</h1>
+    <p style="font-size: 28px;">กลุ่มเยาวชนอาสาพัฒนาบ้านเกิด</p> 
+</div>
 
 <div class="container">
     <table class="table">
-        <tread>
-            <tr>
-                <th>Name</th>
-                <th>Detail</th>
-                <th>Barcode</th>
-                <th>Qty</th>
-                <th>Prices</th>
-                <th>Status</th>
-            </tr>
-        </tread>
-        <tbody>
-            {% for p in products %}   
-            <tr>
-                <td>{{p.product_name}}</td>   
-                <td>{{p.product_detail}}</td>   
-                <td>{{p.product_barcode}}</td>   
-                <td>{{p.product_qty}}</td>   
-                <td>{{p.product_prices}}</td>   
-                <td>{{p.product_status}}</td>     
-            </tr>
-            {% endfor %}
-        </tbody>
+        <img src="static/images/home.jpg" height="70.5%" alt=""  >
     </table>    
+
+    <h1>กิจกรรม</h1>
+
+    <table class="table ; text-center" >
+        <td style="width:25%;height:10% ;">
+            <div>
+                <img src="static/images/ac1.jpg" height="20%" alt="" >
+                <B>โครงการช่วยเหลือผู้ได้รับผลกระทบ กับ COVID-19     
+                    <br> ปี พ.ศ 2563  </B>  
+            </div>
+        </td>
+
+        <td style="width:25%;height:auto ;" >
+            <div class="nav-bar">
+                <img src="static/images/ac2.jpg" height="25%" alt="">
+                <B>โครงการละศีลอดแก่เด็กกำพร้า คนแก่ และผู้ยากไร้ ครั้งที่ 2
+                <br>ปี พ.ศ 2562</B>   
+            </div>
+        </td>
+    </table>
+
+
+    <table class="table ; text-center" >
+    <td style="width:25%;height:auto ;">
+        <div class="nav-bar">
+            <img src="static/images/ac3.jpg" height="50%" alt="">
+            <B> โครงการเธอและฉันสู่วันหน้าที่สดใส 
+            <br> ปี พ.ศ 2561 </B>
+        
+        </div>
+    </td>
+    <td style="width:25%;height:auto ;">
+        <div class="nav-bar">
+            <img src="static/images/ac4.jpg" height="50%" alt="">
+            <B>โครงการละศีลอดแก่เด็กกำพร้า คนแก่ ผู้ยากไร้ และคนพิการ
+            <br>ปี พ.ศ 2561 </B>
+      
+        </div>
+    </td>
+    </table>
 </div>
+<div class="jumbotron text-center">
+    <h1>การติดต่อ</h1>
+    <a class="nav-link" 
+    href="https://www.facebook.com/%E0%B8%81%E0%B8%A5%E0%B8%B8%E0%B9%88%E0%B8%A1%E0%B9%80%E0%B8%A2%E0%B8%B2%E0%B8%A7%E0%B8%8A%E0%B8%99%E0%B8%AD%E0%B8%B2%E0%B8%AA%E0%B8%B2%E0%B8%9E%E0%B8%B1%E0%B8%92%E0%B8%99%E0%B8%B2%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%81%E0%B8%B4%E0%B8%94-226709124544136">
+    <span class="sr-only">(current)</span>
+    <img src = "static/images/face.png"  width="55" ></a>
+    <B> 098 675 6085  </B>
+  </div>
 {% endblock %}

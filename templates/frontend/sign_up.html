@@ -1,0 +1,137 @@
+{% extends 'frontend/base.html' %}
+{% block title %} Sign up {% endblock %}
+{% block content %}
+<html lang="en">
+
+<head>
+  <title>sign-up</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <style>
+
+.bg {
+  background-image: url("static/images/88848.jpg");
+
+  height: 100%; 
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+    
+    article {
+      float: right;
+      color:rgb(1, 1, 1);
+      padding: 10px 0px;
+      width: 100%;
+      height: 250px;
+    }
+
+    aside {
+      float: left;
+      color:rgb(255, 255, 255);
+      padding: 1px;
+      width: 100px;
+      height: 650px;
+    }
+
+    section:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+      
+    input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=button] {
+    width: 100%;
+    background-color: rgb(1, 1, 1);
+    color: rgb(255, 255, 255);
+    padding: 14px 0px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=button]:hover {
+  background-color: rgb(159, 165, 245);;
+}
+
+div {
+  padding: 30px 400px;
+}
+
+  </style>
+</head>
+
+<body class="bg">
+
+
+
+    <article class = "text-center">
+      <br><br><br><br><h1 style="font-size: 20px;">SIGN UP</h1>
+    </article>
+
+    
+        <script>
+
+          function checkLogin(x){
+            var text = document.getElementById('Name').value;
+            var a = new String ( text );
+            var b = a.toUpperCase();
+          if (x.Name.value == "" || x.Name.value != b){
+            alert("please capital letters"); return false;}
+
+            var num = document.getElementById("Age").value;
+            var d = new Number ( num );
+		       if(x.Age.value ==""|| x.Age.value != d)
+	        	{alert("Please number Age"); return true; }
+
+            var tel=document.getElementById("Mobile").value;
+            var f = new Number (tel);
+		      if(x.Mobile.value ==""|| x.Mobile.value != f)
+	        	{alert("Please number Mobile"); return false;}
+
+            var x=document.getElementById("Email").value;
+            var atpos=x.indexOf("@");
+            var dotpos=x.lastIndexOf(".");
+          if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)  
+          {  alert("Not a valid e-mail address");  return false;  }
+          else {
+            location= "index.html"
+  }}
+        </script>
+
+<div>
+        <form>
+          <input type="text" id="Name" name="Name" placeholder="Your Name.."></p>
+          <input type="text" 	id="Age" name="Age" placeholder="Your Age.." maxlength="2" pattern="[0-9]{1,}" title="กรอกตัวเลขเท่านั้น" required></p>
+          <input type="text" id="Mobile" name="Mobile" placeholder="Your Mobile.." maxlength="10"></p>
+          <input type="text" id="Email" name="Email" placeholder="Your Email.."></p>
+          <p><input type="button" value="Login" 	onClick="checkLogin(this.form)"></p>
+        </form>    
+    </div>
+<div class="jumbotron text-center">
+    <h1>การติดต่อ</h1>
+    <a class="nav-link" 
+    href="https://www.facebook.com/%E0%B8%81%E0%B8%A5%E0%B8%B8%E0%B9%88%E0%B8%A1%E0%B9%80%E0%B8%A2%E0%B8%B2%E0%B8%A7%E0%B8%8A%E0%B8%99%E0%B8%AD%E0%B8%B2%E0%B8%AA%E0%B8%B2%E0%B8%9E%E0%B8%B1%E0%B8%92%E0%B8%99%E0%B8%B2%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%81%E0%B8%B4%E0%B8%94-226709124544136">
+    <span class="sr-only">(current)</span>
+    <img src = "static/images/face.png"  width="55" ></a>
+    <B> 098 675 6085  </B>
+  </div>
+
+</body>
+
+</html>
+{% endblock %}
